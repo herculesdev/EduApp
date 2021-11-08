@@ -1,0 +1,7 @@
+.vs
+API/bin
+API/obj
+Domain/bin
+Domain/obj
+Infra/bin
+Infra/obj
