@@ -8,7 +8,7 @@ namespace Domain.Interfaces.Repositories
         bool CpfExists(string cpf);
         void Delete(long id);
         Student Get(long id);
-        IList<Student> GetAll();
+        IList<Student> GetAll(string name = "");
         bool IdExists(long id);
         bool RAExists(string ra);
         Student Update(Student student);

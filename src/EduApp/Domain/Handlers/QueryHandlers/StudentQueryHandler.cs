@@ -37,7 +37,7 @@ namespace Domain.Handlers.QueryHandlers
             if (IsNotValid)
                 return new List<StudentResponse>();
 
-            return _studentRepository.GetAll().Select(s => new StudentResponse(s.Id, s.Name, s.Email, s.RA, s.CPF)).ToList();
+            return _studentRepository.GetAll(query.Name).Select(s => new StudentResponse(s.Id, s.Name, s.Email, s.RA, s.CPF)).ToList();
         }
     }
 }

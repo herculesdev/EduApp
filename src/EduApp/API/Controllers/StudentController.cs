@@ -25,10 +25,11 @@ namespace API.Controllers
             return GetResponse(_queryHandler.Handle(new GetStudentByIdQuery(id)), _queryHandler);
         }
 
-        [HttpGet()]
-        public IActionResult Get()
+        [HttpGet]
+        public IActionResult Get(string? name = "")
         {
-            return GetResponse(_queryHandler.Handle(new GetAllStudentQuery()), _queryHandler);
+            name ??= "";
+            return GetResponse(_queryHandler.Handle(new GetAllStudentQuery(name)), _queryHandler);
         }
 
         [HttpPost]

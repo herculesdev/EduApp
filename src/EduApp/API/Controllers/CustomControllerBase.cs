@@ -16,7 +16,7 @@ namespace API.Controllers
         protected IActionResult GetResponse(IHandler handler)
         {
             if (handler.IsValid)
-                return Ok();
+                return Ok(new { });
 
             return BadRequest(handler.Notifications);
         }

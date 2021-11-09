@@ -41,9 +41,10 @@ namespace Infra.Data.Repositories
             return _context.Students.SingleOrDefault(s => s.Id == id) ?? new Student(0, "", "", "", "");
         }
 
-        public IList<Student> GetAll()
+        public IList<Student> GetAll(string name = "")
         {
-            return _context.Students.ToList();
+            name = name.ToUpper();
+            return _context.Students.Where(x => x.Name.ToUpper().Contains(name)).ToList();
         }
 
         public bool IdExists(long id)

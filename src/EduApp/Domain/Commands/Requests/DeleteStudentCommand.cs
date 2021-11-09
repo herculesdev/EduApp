@@ -4,7 +4,7 @@ namespace Domain.Commands.Requests
 {
     public class DeleteStudentCommand : Command<DeleteStudentCommand>
     {
-        public long Id { get; set; }
+        public long Id { get; init; }
 
         public DeleteStudentCommand(long id)
         {
