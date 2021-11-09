@@ -1,8 +1,8 @@
-﻿using Domain.CommandHandlers;
-using Domain.Interfaces.CommandHandlers;
-using Domain.Interfaces.QueryHandlers;
+﻿using Domain.Handlers.CommandHandlers;
+using Domain.Interfaces.Handlers.CommandHandlers;
+using Domain.Interfaces.Handlers.QueryHandlers;
 using Domain.Interfaces.Repositories;
-using Domain.QueryHandlers;
+using Domain.Handlers.QueryHandlers;
 using Infra.Data.Context;
 using Infra.Data.Repositories;
 using Microsoft.EntityFrameworkCore;

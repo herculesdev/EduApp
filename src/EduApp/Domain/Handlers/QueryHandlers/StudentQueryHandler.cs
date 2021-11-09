@@ -1,11 +1,12 @@
 ﻿using Domain.Commands.Responses;
-using Domain.Interfaces.QueryHandlers;
+using Domain.Interfaces.Handlers;
+using Domain.Interfaces.Handlers.QueryHandlers;
 using Domain.Interfaces.Repositories;
 using Domain.Queries.Requests;
 
-namespace Domain.QueryHandlers
+namespace Domain.Handlers.QueryHandlers
 {
-    public class StudentQueryHandler : QueryHandler, IStudentQueryHandler
+    public class StudentQueryHandler : QueryHandler, IStudentQueryHandler, IHandler
     {
         private readonly IStudentRepository _studentRepository;
 

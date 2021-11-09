@@ -1,10 +1,10 @@
 ﻿using Domain.Commands.Requests;
 using Domain.Commands.Responses;
-using Domain.Interfaces.CommandHandlers;
+using Domain.Interfaces.Handlers.CommandHandlers;
 using Domain.Interfaces.Repositories;
 using Domain.Models;
 
-namespace Domain.CommandHandlers
+namespace Domain.Handlers.CommandHandlers
 {
     public class StudentCommandHandler : CommandHandler, IStudentCommandHandler
     {
@@ -55,7 +55,7 @@ namespace Domain.CommandHandlers
 
         public void Handle(DeleteStudentCommand command)
         {
-            AddNotifications(command);
+            AddNotifications(command.Notifications);
 
             if (!_studentRepository.IdExists(command.Id))
                 AddNotification("Id", "Student does not exist");

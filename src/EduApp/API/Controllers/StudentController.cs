@@ -1,7 +1,6 @@
 ﻿using Domain.Commands.Requests;
-using Domain.Commands.Responses;
-using Domain.Interfaces.CommandHandlers;
-using Domain.Interfaces.QueryHandlers;
+using Domain.Interfaces.Handlers.CommandHandlers;
+using Domain.Interfaces.Handlers.QueryHandlers;
 using Domain.Queries.Requests;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,7 +8,7 @@ namespace API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class StudentController : ControllerBase
+    public class StudentController : CustomControllerBase
     {
         private readonly IStudentCommandHandler _commandHandler;
         private readonly IStudentQueryHandler _queryHandler;
@@ -21,33 +20,34 @@ namespace API.Controllers
         }
 
         [HttpGet("{id}")]
-        public StudentResponse Get(long id)
+        public IActionResult Get(long id)
         {
-            return _queryHandler.Handle(new GetStudentByIdQuery(id));
+            return GetResponse(_queryHandler.Handle(new GetStudentByIdQuery(id)), _queryHandler);
         }
 
         [HttpGet()]
-        public IList<StudentResponse> Get()
+        public IActionResult Get()
         {
-            return _queryHandler.Handle(new GetAllStudentQuery());
+            return GetResponse(_queryHandler.Handle(new GetAllStudentQuery()), _queryHandler);
         }
 
         [HttpPost]
-        public StudentResponse Create(CreateStudentCommand command)
+        public IActionResult Create(CreateStudentCommand command)
         {
-            return _commandHandler.Handle(command);
+            return GetResponse(_commandHandler.Handle(command), _commandHandler);
         }
 
         [HttpPut]
-        public StudentResponse Update(UpdateStudentCommand command)
+        public IActionResult Update(UpdateStudentCommand command)
         {
-            return _commandHandler.Handle(command);
+            return GetResponse(_commandHandler.Handle(command), _commandHandler);
         }
 
         [HttpDelete("{id}")]
-        public void Delete(long id)
+        public IActionResult Delete(long id)
         {
             _commandHandler.Handle(new DeleteStudentCommand(id));
+            return GetResponse(_commandHandler);
         }
     }
 }

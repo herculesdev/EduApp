@@ -1,4 +1,4 @@
-﻿namespace Domain.Interfaces.CommandHandlers
+﻿namespace Domain.Interfaces.Handlers.CommandHandlers
 {
     public interface ICommandWithoutHandler<TCommand>
     {

@@ -1,6 +1,6 @@
 ﻿using Flunt.Notifications;
 
-namespace Domain.QueryHandlers
+namespace Domain.Handlers.QueryHandlers
 {
     public class QueryHandler : Notifiable<Notification>
     {

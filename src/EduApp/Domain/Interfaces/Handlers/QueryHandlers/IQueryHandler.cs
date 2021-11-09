@@ -1,4 +1,4 @@
-﻿namespace Domain.Interfaces.QueryHandlers
+﻿namespace Domain.Interfaces.Handlers.QueryHandlers
 {
     public interface IQueryHandler<TQuery, TResponse>
     {

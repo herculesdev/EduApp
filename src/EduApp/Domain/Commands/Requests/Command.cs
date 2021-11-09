@@ -5,7 +5,16 @@ namespace Domain.Commands.Requests
 {
     public class Command<TCommand> : Notifiable<Notification>
     {
-        protected Contract<TCommand> Contract { get; set; } = new Contract<TCommand>();
+        private Contract<TCommand> _contract = new Contract<TCommand>();
+        protected Contract<TCommand> Contract 
+        { 
+            get => _contract; 
+            set 
+            { 
+                _contract = value;
+                AddNotifications(_contract);
+            } 
+        }
         public new bool IsValid => Validate();
 
         private bool Validate()

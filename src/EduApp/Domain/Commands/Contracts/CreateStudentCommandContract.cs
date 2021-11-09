@@ -12,9 +12,9 @@ namespace Domain.Commands.Contracts
             _command = command;
 
             Requires()
-                .IsNotNullOrEmpty(_command.Name, "Name", "name must not be empty")
+                .IsNullOrEmpty(_command.Name, "Name", "name must not be empty")
                 .IsEmail(_command.Email, "Email", "Email is invalid")
-                .IsNotNullOrEmpty(_command.RA, "RA", "RA must not be empty")
+                .IsNullOrEmpty(_command.RA, "RA", "RA must not be empty")
                 .IsCpf(_command.CPF, "CPF", "CPF is invalid");
         }
     }

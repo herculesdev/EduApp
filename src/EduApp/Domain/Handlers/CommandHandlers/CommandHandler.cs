@@ -1,6 +1,6 @@
 ﻿using Flunt.Notifications;
 
-namespace Domain.CommandHandlers
+namespace Domain.Handlers.CommandHandlers
 {
     public class CommandHandler : Notifiable<Notification>
     {
