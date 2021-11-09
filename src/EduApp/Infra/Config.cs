@@ -16,7 +16,7 @@ namespace Infra
             var connectionString = configuration.GetConnectionString("DefaultConnection");
 
             // DataContexts
-            services.AddDbContextPool<DataContext>(opt => opt.UseMySQL(connectionString));
+            services.AddDbContext<DataContext>(opt => opt.UseSqlite(connectionString));
 
             // Repositories
             services.AddTransient<IStudentRepository, StudentRepository>();

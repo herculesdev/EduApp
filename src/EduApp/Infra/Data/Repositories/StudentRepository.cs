@@ -27,7 +27,23 @@ namespace Infra.Data.Repositories
 
         public void Delete(long id)
         {
-            throw new NotImplementedException();
+            var student = _context.Students.SingleOrDefault(s => s.Id == id);
+
+            if (student == null)
+                return;
+
+            _context.Students.Remove(student);
+            _context.SaveChanges();
+        }
+
+        public Student Get(long id)
+        {
+            return _context.Students.SingleOrDefault(s => s.Id == id) ?? new Student(0, "", "", "", "");
+        }
+
+        public IList<Student> GetAll()
+        {
+            return _context.Students.ToList();
         }
 
         public bool IdExists(long id)

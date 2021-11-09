@@ -1,7 +1,10 @@
-﻿namespace Domain.Commands.Requests
+﻿using Domain.Commands.Contracts;
+
+namespace Domain.Commands.Requests
 {
-    public class UpdateStudentCommand
+    public class UpdateStudentCommand : Command<UpdateStudentCommand>
     {
+        public long Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
 
@@ -9,6 +12,8 @@
         {
             Name = name;
             Email = email;
+
+            Contract = new UpdateStudentCommandContract(this);
         }
     }
 }
