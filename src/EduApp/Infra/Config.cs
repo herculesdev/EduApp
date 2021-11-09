@@ -1,6 +1,8 @@
 ﻿using Domain.CommandHandlers;
 using Domain.Interfaces.CommandHandlers;
+using Domain.Interfaces.QueryHandlers;
 using Domain.Interfaces.Repositories;
+using Domain.QueryHandlers;
 using Infra.Data.Context;
 using Infra.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +25,7 @@ namespace Infra
 
             // Handlers
             services.AddTransient<IStudentCommandHandler, StudentCommandHandler>();
+            services.AddTransient<IStudentQueryHandler, StudentQueryHandler>();
         }
     }
 }
