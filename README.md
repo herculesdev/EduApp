@@ -82,12 +82,13 @@ Ferramentas/tecnologias utilizadas para construção deste projeto
 
 * [.NET 6](https://dotnet.microsoft.com/download/dotnet/6.0) - Backend e Web API
 * [Entity Framework Core](https://docs.microsoft.com/pt-br/ef/core/) - Mapeamento Objeto-Relacional
-*  [Flunt]((https://github.com/andrebaltieri/Flunt)) - Validações de domínio
+* [Flunt](https://github.com/andrebaltieri/Flunt) - Validações de domínio
 * [SQLite](https://www.sqlite.org/index.html) - Banco de Dados
 * [VueJS](https://vuejs.org/) - Lib Javascript (Frontend)
 * [Vuetify](https://vuetifyjs.com/) - Framework UI para o VueJS
 * [Visual Studio Code](https://code.visualstudio.com/) - Editor de Código
-* [Visual Studio 2022]((https://visualstudio.microsoft.com/pt-br/launch/)) - IDE C# / .NET
+* [Visual Studio 2022](https://visualstudio.microsoft.com/pt-br/launch/) - IDE C# / .NET
+* [Swagger](https://swagger.io/) - Documentação e teste da API
 
 ## ☑️ O que eu adicionaria se tivesse mais tempo
 * AutoMapper para mapeamento automático entre os commands, queries, responses e models
