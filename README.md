@@ -88,6 +88,7 @@ Ferramentas/tecnologias utilizadas para construção deste projeto
 * [.NET 6](https://dotnet.microsoft.com/download/dotnet/6.0) - Backend e Web API
 * [Entity Framework Core](https://docs.microsoft.com/pt-br/ef/core/) - Mapeamento Objeto-Relacional
 * [Flunt](https://github.com/andrebaltieri/Flunt) - Validações de domínio
+* [Moq](https://github.com/moq/moq) - Mocagem de dependencias nos testes de unidade
 * [SQLite](https://www.sqlite.org/index.html) - Banco de Dados
 * [VueJS](https://vuejs.org/) - Lib Javascript (Frontend)
 * [Vuetify](https://vuetifyjs.com/) - Framework UI para o VueJS
@@ -103,6 +104,8 @@ Ferramentas/tecnologias utilizadas para construção deste projeto
 * Extrair o acesso a dados da camada de infraestrutura
 * Implementar o Unit Of Work para controle transacional
 * Tornar os endpoints e algumas operações assíncronas
+* Aumentar a cobertura dos testes (extendo-os aos entities, commands e queries e até mesmo aos repositories com banco de dados In-Memory
+
 Obs: a princípio o projeto utilizaria o MySQL mas devido diversos problemas por eu ter utilizado o .NET 6 Preview, me vi obrigado a optar pelo SQLite, porém numa ocasião normal em que tivesse utilizando um produto estável isso não ocorreria. Tenho outro projeto utilizado o EF + MySQL que pode ser conferido [aqui](https://github.com/herculesdev/covid-app)
 
 ## 📚 Arquitetura
