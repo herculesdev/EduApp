@@ -30,6 +30,11 @@ Compile utilizando:
 dotnet build
 ```
 
+Rode os testes de unidade (caso queira):
+```
+dotnet test
+```
+
 Em seguida rode o servidor:
 ```
 dotnet run --project API
