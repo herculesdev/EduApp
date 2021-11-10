@@ -27,7 +27,10 @@ namespace Domain.Handlers.QueryHandlers
             if (IsNotValid)
                 return new StudentResponse(0, "", "", "", "");
 
-            return new StudentResponse(student.Id, student.Name, student.Email, student.RA, student.CPF);
+            if(student != null)
+                return new StudentResponse(student.Id, student.Name, student.Email, student.RA, student.CPF);
+
+            return new StudentResponse(0, "", "", "", "");
         }
 
         public IList<StudentResponse> Handle(GetAllStudentQuery query)

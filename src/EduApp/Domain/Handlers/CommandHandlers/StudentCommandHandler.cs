@@ -18,6 +18,7 @@ namespace Domain.Handlers.CommandHandlers
 
         public StudentResponse Handle(CreateStudentCommand command)
         {
+            Clear();
             AddNotifications(command);
 
             if (_studentRepository.CpfExists(command.CPF))
@@ -36,6 +37,7 @@ namespace Domain.Handlers.CommandHandlers
 
         public StudentResponse Handle(UpdateStudentCommand command)
         {
+            Clear();
             AddNotifications(command);
 
             if (!_studentRepository.IdExists(command.Id))
@@ -55,6 +57,7 @@ namespace Domain.Handlers.CommandHandlers
 
         public void Handle(DeleteStudentCommand command)
         {
+            Clear();
             AddNotifications(command.Notifications);
 
             if (!_studentRepository.IdExists(command.Id))
