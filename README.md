@@ -6,8 +6,8 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 ### 📋 Pré-requisitos
 * [.NET 7 ou superior](https://dotnet.microsoft.com/download/dotnet/7.0)
-* [Última Versão do GIT](https://git-scm.com/downloads)
 * [PostgreSQL 15 ou superior](https://www.postgresql.org/download/)
+* [Última Versão do GIT](https://git-scm.com/downloads)
 
 ### 🔧 Clonar, configurar e executar
 
@@ -30,7 +30,10 @@ Altere a seção **ConnectionStrings** com as informações de conexão com o Po
 ```
 
 #### 2. Subindo o Backend
+**Observação:** os passos abaixo foram realizados no terminal, mas caso utilize um ambiente de desenvolvimento integrado como o **Microsoft Visual Studio** ou **JetBrains Rider IDE**, basta abrir a solução ``ERP.sln`` que está na pasta src e executar o projeto ``ERP.API``
+
 No terminal, acesse a pasta do código fonte do projeto com:
+
 ```bash
 cd erp-backend/src
 ```
