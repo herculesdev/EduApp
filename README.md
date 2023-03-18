@@ -30,7 +30,7 @@ Altere a seção **ConnectionStrings** com as informações de conexão com o Po
 ```
 
 #### 2. Subindo o Backend
-**Observação:** os passos abaixo foram realizados no terminal, mas caso utilize um ambiente de desenvolvimento integrado como o **Microsoft Visual Studio** ou **JetBrains Rider IDE**, basta abrir a solução ``ERP.sln`` que está na pasta src e executar o projeto ``ERP.API``
+**Observação:** os passos abaixo foram realizados no terminal, mas caso utilize um ambiente de desenvolvimento integrado como o **Microsoft Visual Studio** ou **JetBrains Rider IDE**, basta abrir a solução ``ERP.sln`` que está na pasta **src** e executar o projeto ``ERP.API``
 
 No terminal, acesse a pasta do código fonte do projeto com:
 
